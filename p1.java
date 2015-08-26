@@ -18,5 +18,6 @@ public class p1 extends Application{
 	public static void main(String args[]){
 		Application.launch();
 	}
-
 }
+//建立兩個視窗(舞台)  建立兩個螢幕(按鈕占滿整個版面---->Button)
+//Stage-->Scene-->Button(StackPane) or Shape or Paint

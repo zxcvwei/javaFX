@@ -5,26 +5,25 @@ import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.paint.Color;
 
-public class p4 extends Application{
+public class p5 extends Application{
 	public void start(Stage mainStage){
+		Pane pane = new Pane();
 		Circle circle = new Circle();
-		circle.setCenterX(100);
-		circle.setCenterY(100);
+		circle.centerXProperty().bind(pane.widthProperty().divide(2));
+		circle.centerYProperty().bind(pane.heightProperty().divide(2));
 		circle.setRadius(50);
 		circle.setStroke(Color.BLUE);
-		circle.setFill(Color.WHITE);
-		Pane pane = new Pane();
+		circle.setFill(Color.YELLOW);
 		pane.getChildren().add(circle);
+
 		Scene scene = new Scene(pane,200,200);
-		mainStage.setTitle("circle");
+		mainStage.setTitle("center circle");
 		mainStage.setScene(scene);
 		mainStage.show();
-
 	}
 
 	public static void main(String args[]){
 		Application.launch();
 	}
-
 }
-//當視窗拉大時  圓只固定於左上角(原本的位子)
+//繫結   固定圓於中心點

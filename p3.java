@@ -18,3 +18,4 @@ public class p3 extends Application {
 	}
 
 }
+//建立一個按鈕(不占滿整個版面--->StackPane)
